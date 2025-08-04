@@ -54,6 +54,7 @@ CREATE TABLE SALES_SAMPLE_DATA (
 ```
 SELECT * FROM sample_sales_data LIMIT 10;
 ```
+---output---
 | ORDERNUMBER | QUANTITYORDERED | PRICEEACH | ORDERLINENUMBER | SALES   | ORDERDATE | STATUS  | QTR_ID | MONTH_ID | YEAR_ID | PRODUCTLINE | MSRP | PRODUCTCODE | CUSTOMERNAME            | PHONE         | ADDRESSLINE1                | ADDRESSLINE2 | CITY          | STATE | POSTALCODE | COUNTRY | TERRITORY | CONTACTLASTNAME | CONTACTFIRSTNAME | DEALSIZE |
 |-------------|------------------|-----------|------------------|---------|------------|---------|--------|-----------|---------|--------------|------|--------------|--------------------------|---------------|------------------------------|---------------|---------------|--------|-------------|---------|-----------|------------------|------------------|----------|
 | 10107       | 30               | 95.7      | 2                | 2871.00 | 24/2/03    | Shipped | 1      | 2         | 2003    | Motorcycles  | 95   | S10_1678     | Land of Toys Inc.        | 2125557818    | 897 Long Airport Avenue      |               | NYC           | NY     | 10022       | USA     | NA        | Yu               | Kwai             | Small    |
@@ -75,6 +76,7 @@ SELECT COUNT(*) FROM sample_sales_data;
 ```
 select distinct status from sample_sales_data;
 ```
+---output---
 | status      |
 |-------------|
 | Disputed    |
@@ -86,6 +88,7 @@ select distinct status from sample_sales_data;
 ```
 select distinct year_id from sample_sales_data;
 ```
+---output---
 | year_id |
 |---------|
 | 2003    |
@@ -95,6 +98,7 @@ select distinct year_id from sample_sales_data;
 ```
 select distinct PRODUCTLINE from sample_sales_data;
 ```
+---output---
 | PRODUCTLINE         |
 |---------------------|
 | Motorcycles         |
@@ -107,6 +111,7 @@ select distinct PRODUCTLINE from sample_sales_data;
 ```
 select distinct COUNTRY from sample_sales_data;
 ```
+---output---
 | COUNTRY   |
 |-----------|
 | USA       |
@@ -119,11 +124,23 @@ select distinct COUNTRY from sample_sales_data;
 ```
 select distinct DEALSIZE from sample_sales_data;
 ```
+---output---
 | DEALSIZE |
 |----------|
 | Small    |
 | Medium   |
 | Large    |
+
+```
+select distinct TERRITORY from sample_sales_data;
+```
+---output---
+| TERRITORY |
+|-----------|
+| NA        |
+| EMEA      |
+| APAC      |
+| Japan     |
 
 
 
