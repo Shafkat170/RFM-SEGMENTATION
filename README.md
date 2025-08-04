@@ -11,4 +11,17 @@ Frequency (F): How often a customer makes a purchase.
 
 Monetary (M): How much money a customer spends.
 
+# Why RFM Segmentation?
+RFM helps:
+
+Identify loyal customers
+
+Detect lost customers
+
+Target potential high-value customers
+
+Improve customer retention strategies
+
+
+
 
