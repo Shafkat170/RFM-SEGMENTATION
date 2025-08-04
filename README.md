@@ -102,6 +102,19 @@ select distinct PRODUCTLINE from sample_sales_data;
 | Planes              |
 | Trains              |
 
+```
+select distinct COUNTRY from sample_sales_data;
+```
+| COUNTRY   |
+|-----------|
+| USA       |
+| France    |
+| Norway    |
+| Australia |
+| Finland   |
+| ...       |
+
+
 
 
 
