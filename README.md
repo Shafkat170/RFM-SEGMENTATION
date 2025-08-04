@@ -114,6 +114,16 @@ select distinct COUNTRY from sample_sales_data;
 | Finland   |
 | ...       |
 
+```
+select distinct DEALSIZE from sample_sales_data;
+```
+| DEALSIZE |
+|----------|
+| Small    |
+| Medium   |
+| Large    |
+
+
 
 
 
