@@ -70,6 +70,17 @@ SELECT COUNT(*) FROM sample_sales_data;
 | COUNT(*) |
 |----------|
 | 2823     |
+```
+select distinct status from sample_sales_data;
+```
+| status      |
+|-------------|
+| Disputed    |
+| In Process  |
+| Cancelled   |
+| On Hold     |
+| Resolved    |
+
 
 
 
