@@ -70,6 +70,8 @@ SELECT COUNT(*) FROM sample_sales_data;
 | COUNT(*) |
 |----------|
 | 2823     |
+
+-- Checking unique values
 ```
 select distinct status from sample_sales_data;
 ```
