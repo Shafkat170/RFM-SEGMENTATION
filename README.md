@@ -90,6 +90,18 @@ select distinct year_id from sample_sales_data;
 | 2004    |
 | 2005    |
 
+```
+select distinct PRODUCTLINE from sample_sales_data;
+```
+| PRODUCTLINE         |
+|---------------------|
+| Motorcycles         |
+| Classic Cars        |
+| Trucks and Buses    |
+| Vintage Cars        |
+| Planes              |
+| Trains              |
+
 
 
 
