@@ -142,6 +142,25 @@ select distinct TERRITORY from sample_sales_data;
 | APAC      |
 | Japan     |
 
+```
+SELECT DISTINCT
+    MONTH_ID
+FROM
+    sample_sales_data
+WHERE
+    year_id = 2005
+ORDER BY 1;
+```
+### 📊 Sample Output Table
+
+| MONTH_ID |
+|----------|
+|    1     |
+|    2     |
+|    3     |
+|    4     |
+|    5     |
+
 
 
 
