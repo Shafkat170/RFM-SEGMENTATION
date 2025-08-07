@@ -161,6 +161,19 @@ ORDER BY 1;
 |    4     |
 |    5     |
 
+```
+select year_id, round(sum(sales),2) as revenue
+    from sample_sales_data
+group by 1
+ORDER BY 1;
+```
+| year_id |  revenue    |
+|---------|-------------|
+| 2003    | 3516979.54  |
+| 2004    | 4724162.60  |
+| 2005    | 1791486.71  |
+
+
 
 
 
