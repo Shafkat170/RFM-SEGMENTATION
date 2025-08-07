@@ -180,6 +180,14 @@ SELECT MIN(str_to_date(ORDERDATE, '%d/%m/%y')) as first_business_day FROM SAMPLE
 |--------------------|
 | 2003-01-06         |
 
+```
+SELECT MAX(str_to_date(ORDERDATE, '%d/%m/%y'))as last_business_day FROM SAMPLE_SALES_DATA;
+```
+| last_business_day  |
+|--------------------|
+| 2005-05-31         |
+
+
 
 
 
