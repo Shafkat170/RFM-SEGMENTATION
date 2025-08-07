@@ -173,6 +173,13 @@ ORDER BY 1;
 | 2004    | 4724162.60  |
 | 2005    | 1791486.71  |
 
+```
+SELECT MIN(str_to_date(ORDERDATE, '%d/%m/%y')) as first_business_day FROM SAMPLE_SALES_DATA;
+```
+| first_business_day |
+|--------------------|
+| 2003-01-06         |
+
 
 
 
