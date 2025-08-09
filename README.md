@@ -151,7 +151,7 @@ WHERE
     year_id = 2005
 ORDER BY 1;
 ```
-### 📊 Sample Output Table
+---output---
 
 | MONTH_ID |
 |----------|
@@ -167,6 +167,7 @@ select year_id, round(sum(sales),2) as revenue
 group by 1
 ORDER BY 1;
 ```
+---output---
 | year_id |  revenue    |
 |---------|-------------|
 | 2003    | 3516979.54  |
@@ -176,6 +177,7 @@ ORDER BY 1;
 ```
 SELECT MIN(str_to_date(ORDERDATE, '%d/%m/%y')) as first_business_day FROM SAMPLE_SALES_DATA;
 ```
+---output---
 | first_business_day |
 |--------------------|
 | 2003-01-06         |
@@ -183,6 +185,7 @@ SELECT MIN(str_to_date(ORDERDATE, '%d/%m/%y')) as first_business_day FROM SAMPLE
 ```
 SELECT MAX(str_to_date(ORDERDATE, '%d/%m/%y'))as last_business_day FROM SAMPLE_SALES_DATA;
 ```
+---output---
 | last_business_day  |
 |--------------------|
 | 2005-05-31         |
@@ -199,6 +202,7 @@ FROM SAMPLE_SALES_DATA
 GROUP BY CUSTOMERNAME) AS SUMMARY_TABLE
 WHERE R_VALUE BETWEEN 50 AND 100;
 ```
+---output---
 | CUSTOMERNAME               | R_VALUE | F_VALUE | M_Value |
 |----------------------------|---------|---------|---------|
 | Alpha Cognac               | 64      | 3       | 70488   |
@@ -258,6 +262,7 @@ FROM RFM_COMBINATION_SCORE AS RC;
 ```
 SELECT * FROM RFM;
 ```
+---output---
 | CUSTOMERNAME                          | RECENCY_VALUE | FREQUENCY_VALUE | MONETARY_VALUE | R_SCORE | F_SCORE | M_SCORE | TOTAL_RFM_SCORE | RFM_SCORE_COMBINATION | CUSTOMER_SEGMENT      |
 |----------------------------------------|---------------|-----------------|----------------|---------|---------|---------|-----------------|-----------------------|-----------------------|
 | Boards & Toys Co.                      | 112           | 2               | 9129           | 4       | 2       | 1       | 7               | 421                   | OTHER                 |
@@ -278,6 +283,7 @@ FROM RFM
 GROUP BY 1
 ORDER BY 2 DESC;
 ```
+---output---
 | CUSTOMER_SEGMENT       | TOTAL_MONETARY_VALUE | AVERAGE_MONETARY_VALUE |
 |------------------------|----------------------|------------------------|
 | Champions              | 3617918              | 212819                 |
