@@ -268,6 +268,24 @@ SELECT * FROM RFM;
 | Bavarian Collectables Imports, Co.     | 258           | 1               | 34994          | 1       | 1       | 1       | 3               | 111                   | About to Sleep        |
 | Double Decker Gift Stores, Ltd         | 495           | 2               | 36019          | 1       | 1       | 1       | 3               | 111                   | About to Sleep        |
 | ...                                    | ...           | ...             | ...            | ...     | ...     | ...     | ...             | ...                   | ...                   |
+# Customer Segment wise Total Monetary Value and Average Monetary Value
+```
+SELECT 
+	CUSTOMER_SEGMENT,
+    ROUND(SUM(MONETARY_VALUE), 0) AS TOTAL_MONETARY_VALUE,
+    ROUND(AVG(MONETARY_VALUE), 0) AS AVERAGE_MONETARY_VALUE
+FROM RFM
+GROUP BY 1
+ORDER BY 2 DESC;
+```
+| CUSTOMER_SEGMENT       | TOTAL_MONETARY_VALUE | AVERAGE_MONETARY_VALUE |
+|------------------------|----------------------|------------------------|
+| Champions              | 3617918              | 212819                 |
+| OTHER                  | 3264963              | 88242                  |
+| Loyal Customers        | 1573981              | 98374                  |
+| About to Sleep         | 1098537              | 64620                  |
+| Promising Customers    | 477226               | 95445                  |
+| ...                    | ...                  | ...                    |
 
 
 
