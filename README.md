@@ -258,6 +258,17 @@ FROM RFM_COMBINATION_SCORE AS RC;
 ```
 SELECT * FROM RFM;
 ```
+| CUSTOMERNAME                          | RECENCY_VALUE | FREQUENCY_VALUE | MONETARY_VALUE | R_SCORE | F_SCORE | M_SCORE | TOTAL_RFM_SCORE | RFM_SCORE_COMBINATION | CUSTOMER_SEGMENT      |
+|----------------------------------------|---------------|-----------------|----------------|---------|---------|---------|-----------------|-----------------------|-----------------------|
+| Boards & Toys Co.                      | 112           | 2               | 9129           | 4       | 2       | 1       | 7               | 421                   | OTHER                 |
+| Atelier graphique                      | 187           | 3               | 24180          | 3       | 3       | 1       | 7               | 331                   | OTHER                 |
+| Auto-Moto Classics Inc.                | 179           | 3               | 26479          | 3       | 3       | 1       | 7               | 331                   | OTHER                 |
+| Microscale Inc.                        | 209           | 2               | 33145          | 2       | 1       | 1       | 4               | 211                   | Promising Customers   |
+| Royale Belge                            | 141           | 4               | 33440          | 4       | 5       | 1       | 10              | 451                   | Loyal Customers       |
+| Bavarian Collectables Imports, Co.     | 258           | 1               | 34994          | 1       | 1       | 1       | 3               | 111                   | About to Sleep        |
+| Double Decker Gift Stores, Ltd         | 495           | 2               | 36019          | 1       | 1       | 1       | 3               | 111                   | About to Sleep        |
+| ...                                    | ...           | ...             | ...            | ...     | ...     | ...     | ...             | ...                   | ...                   |
+
 
 
 
