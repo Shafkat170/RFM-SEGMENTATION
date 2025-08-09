@@ -187,6 +187,31 @@ SELECT MAX(str_to_date(ORDERDATE, '%d/%m/%y'))as last_business_day FROM SAMPLE_S
 |--------------------|
 | 2005-05-31         |
 
+# -- SubQuery
+```
+SELECT * FROM
+(SELECT 
+	CUSTOMERNAME,
+    DATEDIFF((SELECT MAX(str_to_date(ORDERDATE, '%d/%m/%y')) FROM SAMPLE_SALES_DATA), MAX(STR_TO_DATE(ORDERDATE, '%d/%m/%y'))) AS R_VALUE,
+    COUNT(DISTINCT ORDERNUMBER) AS F_VALUE,
+    ROUND(SUM(SALES),0) AS M_Value
+FROM SAMPLE_SALES_DATA
+GROUP BY CUSTOMERNAME) AS SUMMARY_TABLE
+WHERE R_VALUE BETWEEN 50 AND 100;
+```
+| CUSTOMERNAME               | R_VALUE | F_VALUE | M_Value |
+|----------------------------|---------|---------|---------|
+| Alpha Cognac               | 64      | 3       | 70488   |
+| Anna's Decorations, Ltd    | 83      | 4       | 153996  |
+| Auto Canal Petit           | 54      | 3       | 93171   |
+| Corporate Gift Ideas Co.   | 97      | 4       | 149882  |
+| Dragon Souveniers, Ltd.    | 90      | 5       | 172990  |
+| FunGiftIdeas.com           | 89      | 3       | 98924   |
+| Lyon Souveniers            | 75      | 3       | 78570   |
+| Mini Auto Werke            | 82      | 3       | 52264   |
+| ...                        | ...     | ...     | ...     |
+
+
 
 
 
